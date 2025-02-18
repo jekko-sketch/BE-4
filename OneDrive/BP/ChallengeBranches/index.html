@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Re-Wire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="">
+  <div id="game" class="center">
+    <div id="content"></div>
+    <div id="levelInfo" class="blueFont hidden">Level 6</div>
+    <div id="nodeInfo" class="blueFont hidden">3 / 10</div>
+    <div id="title" class="center hidden" style="visibility: visible; opacity: 1;">
+      <h1 class="blueFont">Re-Wire</h1>
+    </div>
+    <div id="description" class="blueFont center hidden" style="visibility: visible; opacity: 1;">
+      <h2>Bring the system back online by rewiring the power nodes.</h2>
+      <h3>The game saves progress automatically, you can come back later and continue from the last played level.</h3>
+    </div>
+    <div id="loading" class="center hidden"><canvas width="200" height="7" id="loadingbar" style="visibility: hidden; opacity: 0;"></canvas></div>
+    <div id="menu" class="center hidden" style="visibility: visible; opacity: 1;"><a id="startBtn" class="btn">START NEW GAME</a> <a id="continueBtn" class="btn" style="visibility: visible;">CONTINUE GAME</a></div>
+    <div id="levelDone" class="center hidden">
+      <div>
+        <h1 id="nextMsg" class="blueFont">Level completed!</h1>
+      </div><a id="nextBtn" class="btn">NEXT LEVEL</a>
+    </div>
+    <div id="reset" class="hidden"><a id="resetBtn" class="btn">RESET</a> <a id="backBtn" class="btn hidden">BACK</a> <a id="skipBtn" class="btn hidden">NEXT</a></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
