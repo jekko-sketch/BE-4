@@ -23,3 +23,28 @@ class DatabaseSeeder extends Seeder
         ]);
     }
 }
+class AllergeenSeeder extends Seeder
+{
+    public function run()
+    {
+        DB::table('allergenen')->insert([
+            ['naam' => 'Gluten', 'omschrijving' => 'Dit product bevat gluten'],
+            ['naam' => 'Gelatine', 'omschrijving' => 'Dit product bevat gelatine'],
+            ['naam' => 'AZO-Kleurstof', 'omschrijving' => 'Dit product bevat AZO-kleurstoffen'],
+            ['naam' => 'Lactose', 'omschrijving' => 'Dit product bevat lactose'],
+            ['naam' => 'Soja', 'omschrijving' => 'Dit product bevat soja'],
+        ]);
+    }
+}
+public function run(): void
+{
+    $this->call([
+        AllergeenSeeder::class,
+        ProductSeeder::class,
+        ContactSeeder::class,
+        LeverancierSeeder::class,
+        MagazijnSeeder::class,
+        ProductPerAllergeenSeeder::class,
+        ProductPerLeverancierSeeder::class,
+    ]);
+}
